@@ -18,6 +18,8 @@ class AddParentBodyClass implements ObserverInterface
     {
         $config = $this->config;
 
-        dd($config->getPageLayout());
+        if($config->getPageLayout() === 'cms-article') {
+            $config->addBodyClass('page-layout-1column');
+        }
     }
 }
